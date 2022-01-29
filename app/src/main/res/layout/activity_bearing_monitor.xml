@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:background="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_arrow_back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/device_monitor"
+                android:textSize="28sp"/>
+        </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="设备：z-1"
+            android:textColor="@color/purple_700"
+            android:textSize="24sp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/pic2"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/bearing_chart_description1"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="20sp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/monitor1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/bearing_chart_description2"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="20sp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/monitor2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_centerVertical="true"
+                android:id="@+id/table"
+                android:layout_marginLeft="20dp"
+                android:background="#000000"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginStart="20dp">
+                <TableRow android:layout_gravity="center"
+                    android:background="#000000"
+                    android:layout_marginBottom="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp">
+                    <TextView android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:layout_marginRight="1dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/position">
+                    </TextView>
+                    <TextView android:layout_weight="1"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="@string/real_time_displacement">
+                    </TextView>
+                </TableRow>
+                <TableRow android:layout_gravity="center"
+                    android:background="#000000"
+                    android:layout_marginBottom="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp">
+                    <TextView android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:layout_marginRight="1dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/A">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/displacementA"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="1dp">
+                    </TextView>
+                </TableRow>
+                <TableRow
+                    android:layout_gravity="center"
+                    android:background="#000000"
+                    android:layout_marginBottom="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp">
+                    <TextView android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:layout_marginRight="1dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/B">
+                    </TextView>
+                    <TextView android:layout_weight="1"
+                        android:id="@+id/displacementB"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </TableRow>
+                <TableRow
+                    android:layout_gravity="center"
+                    android:background="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_width="200dp">
+                    <TextView android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:layout_marginRight="1dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/c_side">
+                    </TextView>
+                    <TextView android:layout_weight="1"
+                        android:id="@+id/displacementC"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </TableRow>
+                <TableRow
+                    android:layout_gravity="center"
+                    android:background="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp">
+                    <TextView android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:layout_marginRight="1dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/d_side">
+                    </TextView>
+                    <TextView android:layout_weight="1"
+                        android:id="@+id/displacementD"
+                        android:padding="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+            <Button
+                android:id="@+id/check_arg"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_arg"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:layout_below="@+id/check_arg"
+                android:id="@+id/query_alarm"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/query_warning"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+</layout>
